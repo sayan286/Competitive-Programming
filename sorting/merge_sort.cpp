@@ -18,7 +18,7 @@ void merge(vector<int>&arr,int low,int mid,int high){
             temp.push_back(arr[left]);
             left++;
         }
-        while(right>=high){
+        while(right<=high){
             temp.push_back(arr[right]);
             right++;
         }
@@ -39,4 +39,3 @@ void merge_sort(vector<int> &arr,int low,int high){
     
     merge(arr,low,mid,high);
 }
-
