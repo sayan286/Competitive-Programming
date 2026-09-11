@@ -39,3 +39,25 @@ void merge_sort(vector<int> &arr,int low,int high){
     
     merge(arr,low,mid,high);
 }
+
+int main(){
+    int n;
+    cin >> n;
+    vector<int>arr(n);
+    for (int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+
+    int low = 0;
+    int high = n-1;
+
+    merge_sort(arr,low,high);
+
+    for (int it:arr){
+        cout << it << " ";
+    }
+
+    cout << endl;
+    
+    return 0; 
+}
