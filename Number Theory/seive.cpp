@@ -84,10 +84,21 @@ vector<int> sieve_pFactor(int n){
 
 // is prime[x]==0;-->Prime
 
+// Factorizing number using stieve:
+
+vector<int>factorize(int k,vector<int>sieve){
+    vector<int>factors;
+    while(sieve[k]!=0){  // while k is composite
+        factors.push_back(sieve[k]);
+        k/=sieve[k];
+    }
+    if(k>1) factors.push_back(k); // adding remaining prime
+    return factors;
+}
 
 // Sum of Divisor Sieve:
 
-vector<int> sum_of_divisor(int n,vector<int> &sieve){
+vector<int> sum_of_divisor(int n){
     vector<int>sumdiv(n+1,0);
         for(int i=1;i<=n;i++){
             for(int j=i;j<=n;j+=i){
