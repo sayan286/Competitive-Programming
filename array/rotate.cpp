@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int>rotate(vector<int> &arr){
+vector<int>rotate(vector<int> &arr,int d){
     int n =arr.size();
-    for(int i=0;i<n-1;i++){
-         swap(arr[i],arr[i+1]);
+    d%=n;
+    for(int i=0;i<n-d;i++){
+         swap(arr[i],arr[i+d]);
     }
 }
 
@@ -16,7 +17,9 @@ int main (){
         cin >> arr[i];
     }
 
-    rotate(arr);
+    int d;
+    cin >> d;
+    rotate(arr,d);
     for(int i=0;i<n;i++){
         cout << arr[i] << " "; 
     }
