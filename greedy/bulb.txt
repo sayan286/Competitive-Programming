@@ -1,0 +1,5 @@
+We have a row of ( N ) bulbs, all initially in the off state (represented as ( 0 )). Each bulb ( i ) (0-indexed, ( 0 \leq i < N )) has a switch. Pressing the switch of bulb ( i ):
+
+Toggles the state (off ( \leftrightarrow ) on) of bulb ( i ).
+Additionally, toggles the state of bulb ( i+1 ) (if ( i < N-1 ), i.e., if a bulb to the right exists).
+The goal is to determine the minimum number of switch presses required to turn all bulbs to the on state (represented as ( 1 )).

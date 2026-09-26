@@ -32,7 +32,7 @@ void quoick_sort(vector<int> &arr,int low,int high){
 // Highest product algo
 int h_product(vector<int> &arr){
     int n = arr.size();
-    quoick_sort(arr,0,n);
+    quoick_sort(arr,0,n-1);
     
     //Case 1 : Product of last two element
     int ans1 = arr[n-1]*arr[n-2]*arr[n-3];
